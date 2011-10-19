@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A061C61144E5BA300EA823D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C60144E5BA300EA823D /* Cocoa.framework */; };
+		4A061C6B144E5BA300EA823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C69144E5BA300EA823D /* InfoPlist.strings */; };
+		4A061C6D144E5BA300EA823D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C6C144E5BA300EA823D /* main.m */; };
+		4A061C71144E5BA300EA823D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C6F144E5BA300EA823D /* Credits.rtf */; };
+		4A061C74144E5BA300EA823D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C73144E5BA300EA823D /* AppDelegate.m */; };
+		4A061C77144E5BA300EA823D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C75144E5BA300EA823D /* MainMenu.xib */; };
+		4A061C7F144E5BA300EA823D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C7E144E5BA300EA823D /* SenTestingKit.framework */; };
+		4A061C80144E5BA300EA823D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C60144E5BA300EA823D /* Cocoa.framework */; };
+		4A061C88144E5BA300EA823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C86144E5BA300EA823D /* InfoPlist.strings */; };
+		4A061C8B144E5BA300EA823D /* EmbeddedV8Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A061C81144E5BA300EA823D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A061C53144E5BA300EA823D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A061C5B144E5BA300EA823D;
+			remoteInfo = EmbeddedV8;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A061C5C144E5BA300EA823D /* EmbeddedV8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmbeddedV8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A061C60144E5BA300EA823D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4A061C63144E5BA300EA823D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4A061C64144E5BA300EA823D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4A061C65144E5BA300EA823D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4A061C68144E5BA300EA823D /* EmbeddedV8-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmbeddedV8-Info.plist"; sourceTree = "<group>"; };
+		4A061C6A144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A061C6C144E5BA300EA823D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A061C6E144E5BA300EA823D /* EmbeddedV8-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmbeddedV8-Prefix.pch"; sourceTree = "<group>"; };
+		4A061C70144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4A061C72144E5BA300EA823D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4A061C73144E5BA300EA823D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4A061C76144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4A061C7D144E5BA300EA823D /* EmbeddedV8Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmbeddedV8Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A061C7E144E5BA300EA823D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4A061C85144E5BA300EA823D /* EmbeddedV8Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmbeddedV8Tests-Info.plist"; sourceTree = "<group>"; };
+		4A061C87144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A061C89144E5BA300EA823D /* EmbeddedV8Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmbeddedV8Tests.h; sourceTree = "<group>"; };
+		4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmbeddedV8Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A061C59144E5BA300EA823D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A061C61144E5BA300EA823D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A061C79144E5BA300EA823D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A061C7F144E5BA300EA823D /* SenTestingKit.framework in Frameworks */,
+				4A061C80144E5BA300EA823D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A061C51144E5BA300EA823D = {
+			isa = PBXGroup;
+			children = (
+				4A061C66144E5BA300EA823D /* EmbeddedV8 */,
+				4A061C83144E5BA300EA823D /* EmbeddedV8Tests */,
+				4A061C5F144E5BA300EA823D /* Frameworks */,
+				4A061C5D144E5BA300EA823D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A061C5D144E5BA300EA823D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C5C144E5BA300EA823D /* EmbeddedV8.app */,
+				4A061C7D144E5BA300EA823D /* EmbeddedV8Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A061C5F144E5BA300EA823D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C60144E5BA300EA823D /* Cocoa.framework */,
+				4A061C7E144E5BA300EA823D /* SenTestingKit.framework */,
+				4A061C62144E5BA300EA823D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A061C62144E5BA300EA823D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C63144E5BA300EA823D /* AppKit.framework */,
+				4A061C64144E5BA300EA823D /* CoreData.framework */,
+				4A061C65144E5BA300EA823D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4A061C66144E5BA300EA823D /* EmbeddedV8 */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C72144E5BA300EA823D /* AppDelegate.h */,
+				4A061C73144E5BA300EA823D /* AppDelegate.m */,
+				4A061C75144E5BA300EA823D /* MainMenu.xib */,
+				4A061C67144E5BA300EA823D /* Supporting Files */,
+			);
+			path = EmbeddedV8;
+			sourceTree = "<group>";
+		};
+		4A061C67144E5BA300EA823D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C68144E5BA300EA823D /* EmbeddedV8-Info.plist */,
+				4A061C69144E5BA300EA823D /* InfoPlist.strings */,
+				4A061C6C144E5BA300EA823D /* main.m */,
+				4A061C6E144E5BA300EA823D /* EmbeddedV8-Prefix.pch */,
+				4A061C6F144E5BA300EA823D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A061C83144E5BA300EA823D /* EmbeddedV8Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C89144E5BA300EA823D /* EmbeddedV8Tests.h */,
+				4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */,
+				4A061C84144E5BA300EA823D /* Supporting Files */,
+			);
+			path = EmbeddedV8Tests;
+			sourceTree = "<group>";
+		};
+		4A061C84144E5BA300EA823D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C85144E5BA300EA823D /* EmbeddedV8Tests-Info.plist */,
+				4A061C86144E5BA300EA823D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A061C5B144E5BA300EA823D /* EmbeddedV8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A061C8E144E5BA300EA823D /* Build configuration list for PBXNativeTarget "EmbeddedV8" */;
+			buildPhases = (
+				4A061C58144E5BA300EA823D /* Sources */,
+				4A061C59144E5BA300EA823D /* Frameworks */,
+				4A061C5A144E5BA300EA823D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmbeddedV8;
+			productName = EmbeddedV8;
+			productReference = 4A061C5C144E5BA300EA823D /* EmbeddedV8.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A061C7C144E5BA300EA823D /* EmbeddedV8Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A061C91144E5BA300EA823D /* Build configuration list for PBXNativeTarget "EmbeddedV8Tests" */;
+			buildPhases = (
+				4A061C78144E5BA300EA823D /* Sources */,
+				4A061C79144E5BA300EA823D /* Frameworks */,
+				4A061C7A144E5BA300EA823D /* Resources */,
+				4A061C7B144E5BA300EA823D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A061C82144E5BA300EA823D /* PBXTargetDependency */,
+			);
+			name = EmbeddedV8Tests;
+			productName = EmbeddedV8Tests;
+			productReference = 4A061C7D144E5BA300EA823D /* EmbeddedV8Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A061C53144E5BA300EA823D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 4A061C56144E5BA300EA823D /* Build configuration list for PBXProject "EmbeddedV8" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4A061C51144E5BA300EA823D;
+			productRefGroup = 4A061C5D144E5BA300EA823D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A061C5B144E5BA300EA823D /* EmbeddedV8 */,
+				4A061C7C144E5BA300EA823D /* EmbeddedV8Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A061C5A144E5BA300EA823D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A061C6B144E5BA300EA823D /* InfoPlist.strings in Resources */,
+				4A061C71144E5BA300EA823D /* Credits.rtf in Resources */,
+				4A061C77144E5BA300EA823D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A061C7A144E5BA300EA823D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A061C88144E5BA300EA823D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A061C7B144E5BA300EA823D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A061C58144E5BA300EA823D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A061C6D144E5BA300EA823D /* main.m in Sources */,
+				4A061C74144E5BA300EA823D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A061C78144E5BA300EA823D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A061C8B144E5BA300EA823D /* EmbeddedV8Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A061C82144E5BA300EA823D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A061C5B144E5BA300EA823D /* EmbeddedV8 */;
+			targetProxy = 4A061C81144E5BA300EA823D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A061C69144E5BA300EA823D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A061C6A144E5BA300EA823D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4A061C6F144E5BA300EA823D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A061C70144E5BA300EA823D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4A061C75144E5BA300EA823D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A061C76144E5BA300EA823D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4A061C86144E5BA300EA823D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A061C87144E5BA300EA823D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A061C8C144E5BA300EA823D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4A061C8D144E5BA300EA823D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4A061C8F144E5BA300EA823D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				INFOPLIST_FILE = "EmbeddedV8/EmbeddedV8-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4A061C90144E5BA300EA823D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				INFOPLIST_FILE = "EmbeddedV8/EmbeddedV8-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4A061C92144E5BA300EA823D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EmbeddedV8.app/Contents/MacOS/EmbeddedV8";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				INFOPLIST_FILE = "EmbeddedV8Tests/EmbeddedV8Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4A061C93144E5BA300EA823D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EmbeddedV8.app/Contents/MacOS/EmbeddedV8";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				INFOPLIST_FILE = "EmbeddedV8Tests/EmbeddedV8Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A061C56144E5BA300EA823D /* Build configuration list for PBXProject "EmbeddedV8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A061C8C144E5BA300EA823D /* Debug */,
+				4A061C8D144E5BA300EA823D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A061C8E144E5BA300EA823D /* Build configuration list for PBXNativeTarget "EmbeddedV8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A061C8F144E5BA300EA823D /* Debug */,
+				4A061C90144E5BA300EA823D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4A061C91144E5BA300EA823D /* Build configuration list for PBXNativeTarget "EmbeddedV8Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A061C92144E5BA300EA823D /* Debug */,
+				4A061C93144E5BA300EA823D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A061C53144E5BA300EA823D /* Project object */;
+}
