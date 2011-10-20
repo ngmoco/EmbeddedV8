@@ -9,14 +9,19 @@
 /* Begin PBXBuildFile section */
 		4A061C61144E5BA300EA823D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C60144E5BA300EA823D /* Cocoa.framework */; };
 		4A061C6B144E5BA300EA823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C69144E5BA300EA823D /* InfoPlist.strings */; };
-		4A061C6D144E5BA300EA823D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C6C144E5BA300EA823D /* main.m */; };
+		4A061C6D144E5BA300EA823D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C6C144E5BA300EA823D /* main.mm */; };
 		4A061C71144E5BA300EA823D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C6F144E5BA300EA823D /* Credits.rtf */; };
-		4A061C74144E5BA300EA823D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C73144E5BA300EA823D /* AppDelegate.m */; };
+		4A061C74144E5BA300EA823D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C73144E5BA300EA823D /* AppDelegate.mm */; };
 		4A061C77144E5BA300EA823D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C75144E5BA300EA823D /* MainMenu.xib */; };
 		4A061C7F144E5BA300EA823D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C7E144E5BA300EA823D /* SenTestingKit.framework */; };
 		4A061C80144E5BA300EA823D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C60144E5BA300EA823D /* Cocoa.framework */; };
 		4A061C88144E5BA300EA823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C86144E5BA300EA823D /* InfoPlist.strings */; };
 		4A061C8B144E5BA300EA823D /* EmbeddedV8Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */; };
+		4A57712E144FC34700EC96AF /* EntityFactory.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A57712D144FC34700EC96AF /* EntityFactory.js */; };
+		4A5771311450085800EC96AF /* Main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A5771301450085800EC96AF /* Main.js */; };
+		4AD1C821144E99C500D55C3B /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD1C820144E99C500D55C3B /* libv8.a */; };
+		4AD1C825144E9B7A00D55C3B /* ScriptEnv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C823144E9B7A00D55C3B /* ScriptEnv.cpp */; };
+		4AD1C829144F627F00D55C3B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C828144F627F00D55C3B /* Entity.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +42,11 @@
 		4A061C65144E5BA300EA823D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A061C68144E5BA300EA823D /* EmbeddedV8-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmbeddedV8-Info.plist"; sourceTree = "<group>"; };
 		4A061C6A144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4A061C6C144E5BA300EA823D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A061C6C144E5BA300EA823D /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		4A061C6E144E5BA300EA823D /* EmbeddedV8-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmbeddedV8-Prefix.pch"; sourceTree = "<group>"; };
 		4A061C70144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4A061C72144E5BA300EA823D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4A061C73144E5BA300EA823D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4A061C73144E5BA300EA823D /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		4A061C76144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4A061C7D144E5BA300EA823D /* EmbeddedV8Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmbeddedV8Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A061C7E144E5BA300EA823D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -49,6 +54,16 @@
 		4A061C87144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A061C89144E5BA300EA823D /* EmbeddedV8Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmbeddedV8Tests.h; sourceTree = "<group>"; };
 		4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmbeddedV8Tests.m; sourceTree = "<group>"; };
+		4A577129144F7C9600EC96AF /* ScriptClassWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptClassWrapper.h; sourceTree = "<group>"; };
+		4A57712B144FA87900EC96AF /* EntityWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityWrapper.h; path = Game/EntityWrapper.h; sourceTree = "<group>"; };
+		4A57712D144FC34700EC96AF /* EntityFactory.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = EntityFactory.js; path = JavaScript/EntityFactory.js; sourceTree = "<group>"; };
+		4A5771301450085800EC96AF /* Main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Main.js; path = JavaScript/Main.js; sourceTree = "<group>"; };
+		4AD1C820144E99C500D55C3B /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = V8/libs/libv8.a; sourceTree = "<group>"; };
+		4AD1C823144E9B7A00D55C3B /* ScriptEnv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScriptEnv.cpp; sourceTree = "<group>"; };
+		4AD1C824144E9B7A00D55C3B /* ScriptEnv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptEnv.h; sourceTree = "<group>"; };
+		4AD1C826144E9EEB00D55C3B /* ScriptBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptBinder.h; sourceTree = "<group>"; };
+		4AD1C828144F627F00D55C3B /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Entity.cpp; path = Game/Entity.cpp; sourceTree = "<group>"; };
+		4AD1C82A144F629600D55C3B /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Game/Entity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD1C821144E99C500D55C3B /* libv8.a in Frameworks */,
 				4A061C61144E5BA300EA823D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +110,7 @@
 		4A061C5F144E5BA300EA823D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4AD1C820144E99C500D55C3B /* libv8.a */,
 				4A061C60144E5BA300EA823D /* Cocoa.framework */,
 				4A061C7E144E5BA300EA823D /* SenTestingKit.framework */,
 				4A061C62144E5BA300EA823D /* Other Frameworks */,
@@ -114,8 +131,11 @@
 		4A061C66144E5BA300EA823D /* EmbeddedV8 */ = {
 			isa = PBXGroup;
 			children = (
+				4A57712C144FC2E700EC96AF /* JavaScript */,
+				4AD1C827144F624900D55C3B /* Game */,
+				4AD1C822144E9B7A00D55C3B /* Scripting */,
 				4A061C72144E5BA300EA823D /* AppDelegate.h */,
-				4A061C73144E5BA300EA823D /* AppDelegate.m */,
+				4A061C73144E5BA300EA823D /* AppDelegate.mm */,
 				4A061C75144E5BA300EA823D /* MainMenu.xib */,
 				4A061C67144E5BA300EA823D /* Supporting Files */,
 			);
@@ -127,7 +147,7 @@
 			children = (
 				4A061C68144E5BA300EA823D /* EmbeddedV8-Info.plist */,
 				4A061C69144E5BA300EA823D /* InfoPlist.strings */,
-				4A061C6C144E5BA300EA823D /* main.m */,
+				4A061C6C144E5BA300EA823D /* main.mm */,
 				4A061C6E144E5BA300EA823D /* EmbeddedV8-Prefix.pch */,
 				4A061C6F144E5BA300EA823D /* Credits.rtf */,
 			);
@@ -151,6 +171,36 @@
 				4A061C86144E5BA300EA823D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A57712C144FC2E700EC96AF /* JavaScript */ = {
+			isa = PBXGroup;
+			children = (
+				4A5771301450085800EC96AF /* Main.js */,
+				4A57712D144FC34700EC96AF /* EntityFactory.js */,
+			);
+			name = JavaScript;
+			sourceTree = "<group>";
+		};
+		4AD1C822144E9B7A00D55C3B /* Scripting */ = {
+			isa = PBXGroup;
+			children = (
+				4AD1C826144E9EEB00D55C3B /* ScriptBinder.h */,
+				4AD1C823144E9B7A00D55C3B /* ScriptEnv.cpp */,
+				4AD1C824144E9B7A00D55C3B /* ScriptEnv.h */,
+				4A577129144F7C9600EC96AF /* ScriptClassWrapper.h */,
+			);
+			path = Scripting;
+			sourceTree = "<group>";
+		};
+		4AD1C827144F624900D55C3B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				4AD1C828144F627F00D55C3B /* Entity.cpp */,
+				4AD1C82A144F629600D55C3B /* Entity.h */,
+				4A57712B144FA87900EC96AF /* EntityWrapper.h */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +276,8 @@
 				4A061C6B144E5BA300EA823D /* InfoPlist.strings in Resources */,
 				4A061C71144E5BA300EA823D /* Credits.rtf in Resources */,
 				4A061C77144E5BA300EA823D /* MainMenu.xib in Resources */,
+				4A57712E144FC34700EC96AF /* EntityFactory.js in Resources */,
+				4A5771311450085800EC96AF /* Main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A061C6D144E5BA300EA823D /* main.m in Sources */,
-				4A061C74144E5BA300EA823D /* AppDelegate.m in Sources */,
+				4A061C6D144E5BA300EA823D /* main.mm in Sources */,
+				4A061C74144E5BA300EA823D /* AppDelegate.mm in Sources */,
+				4AD1C825144E9B7A00D55C3B /* ScriptEnv.cpp in Sources */,
+				4AD1C829144F627F00D55C3B /* Entity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +423,15 @@
 		4A061C8F144E5BA300EA823D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/V8/include\"";
 				INFOPLIST_FILE = "EmbeddedV8/EmbeddedV8-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/V8/libs\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -380,9 +440,15 @@
 		4A061C90144E5BA300EA823D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/V8/include\"";
 				INFOPLIST_FILE = "EmbeddedV8/EmbeddedV8-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/V8/libs\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,6 +501,7 @@
 				4A061C90144E5BA300EA823D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A061C91144E5BA300EA823D /* Build configuration list for PBXNativeTarget "EmbeddedV8Tests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +510,7 @@
 				4A061C93144E5BA300EA823D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
