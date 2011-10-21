@@ -26,6 +26,8 @@
 		4A57712E144FC34700EC96AF /* EntityFactory.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A57712D144FC34700EC96AF /* EntityFactory.js */; };
 		4A5771311450085800EC96AF /* Main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A5771301450085800EC96AF /* Main.js */; };
 		4A5771371450834B00EC96AF /* ScriptManifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A5771361450834B00EC96AF /* ScriptManifest.plist */; };
+		4A851A5B1451D70800BDFF21 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A851A5A1451D70800BDFF21 /* clear.png */; };
+		4A851A5D1451D76000BDFF21 /* javascript.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A851A5C1451D76000BDFF21 /* javascript.png */; };
 		4AD1C821144E99C500D55C3B /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD1C820144E99C500D55C3B /* libv8.a */; };
 		4AD1C825144E9B7A00D55C3B /* ScriptEnv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C823144E9B7A00D55C3B /* ScriptEnv.cpp */; };
 		4AD1C829144F627F00D55C3B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C828144F627F00D55C3B /* Entity.cpp */; };
@@ -74,6 +76,8 @@
 		4A57712D144FC34700EC96AF /* EntityFactory.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = EntityFactory.js; path = JavaScript/EntityFactory.js; sourceTree = "<group>"; };
 		4A5771301450085800EC96AF /* Main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Main.js; path = JavaScript/Main.js; sourceTree = "<group>"; };
 		4A5771361450834B00EC96AF /* ScriptManifest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ScriptManifest.plist; path = EmbeddedV8/ScriptManifest.plist; sourceTree = SOURCE_ROOT; };
+		4A851A5A1451D70800BDFF21 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
+		4A851A5C1451D76000BDFF21 /* javascript.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = javascript.png; sourceTree = "<group>"; };
 		4AD1C820144E99C500D55C3B /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = V8/libs/libv8.a; sourceTree = "<group>"; };
 		4AD1C823144E9B7A00D55C3B /* ScriptEnv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScriptEnv.cpp; sourceTree = "<group>"; };
 		4AD1C824144E9B7A00D55C3B /* ScriptEnv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptEnv.h; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 		4A061C67144E5BA300EA823D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A851A5C1451D76000BDFF21 /* javascript.png */,
+				4A851A5A1451D70800BDFF21 /* clear.png */,
 				4A061C75144E5BA300EA823D /* MainMenu.xib */,
 				4A478DA014511C4F00F3D472 /* trash.png */,
 				4A27F2601450CCF5009B5C56 /* physics.png */,
@@ -317,6 +323,8 @@
 				4A061CAD1450CB2100EA823D /* border.png in Resources */,
 				4A27F2611450CCF5009B5C56 /* physics.png in Resources */,
 				4A478DA114511C5000F3D472 /* trash.png in Resources */,
+				4A851A5B1451D70800BDFF21 /* clear.png in Resources */,
+				4A851A5D1451D76000BDFF21 /* javascript.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

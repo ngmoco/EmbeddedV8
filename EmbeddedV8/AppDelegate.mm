@@ -145,7 +145,7 @@ using namespace game;
             destRect.origin = imageOrigin;
             destRect.size = imageSize;
             
-            NSImage * image = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForImageResource:@"Mushroom-Super"]];
+            NSImage * image = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForImageResource:@"javascript"]];
             
             [image drawInRect: destRect
                 fromRect: NSZeroRect

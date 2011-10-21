@@ -1335,7 +1335,7 @@
 							<bool key="NSToolbarIsUserRemovable">YES</bool>
 							<int key="NSToolbarItemVisibilityPriority">0</int>
 						</object>
-						<object class="NSToolbarItem" key="43C29CE9-3C18-4396-9F5A-628CEB238AAC" id="645696576">
+						<object class="NSToolbarItem" key="43C29CE9-3C18-4396-9F5A-628CEB238AAC" id="208482597">
 							<object class="NSMutableString" key="NSToolbarItemIdentifier">
 								<characters key="NS.bytes">43C29CE9-3C18-4396-9F5A-628CEB238AAC</characters>
 							</object>
@@ -1343,7 +1343,10 @@
 							<string key="NSToolbarItemPaletteLabel">RemoveAll</string>
 							<string key="NSToolbarItemToolTip"/>
 							<nil key="NSToolbarItemView"/>
-							<nil key="NSToolbarItemImage"/>
+							<object class="NSCustomResource" key="NSToolbarItemImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">clear</string>
+							</object>
 							<nil key="NSToolbarItemTarget"/>
 							<nil key="NSToolbarItemAction"/>
 							<string key="NSToolbarItemMinSize">{0, 0}</string>
@@ -1364,7 +1367,7 @@
 							<nil key="NSToolbarItemView"/>
 							<object class="NSCustomResource" key="NSToolbarItemImage">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">Mushroom-Super</string>
+								<string key="NSResourceName">javascript</string>
 							</object>
 							<nil key="NSToolbarItemTarget"/>
 							<nil key="NSToolbarItemAction"/>
@@ -1594,13 +1597,13 @@
 						<reference ref="944610105"/>
 						<reference ref="774247219"/>
 						<reference ref="967249035"/>
-						<reference ref="645696576"/>
+						<reference ref="208482597"/>
 					</array>
 					<array key="NSToolbarIBDefaultItems">
 						<reference ref="1002114360"/>
 						<reference ref="873939273"/>
 						<reference ref="484012404"/>
-						<reference ref="645696576"/>
+						<reference ref="208482597"/>
 						<reference ref="975027548"/>
 						<reference ref="967249035"/>
 					</array>
@@ -1615,7 +1618,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
+				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
@@ -2376,7 +2379,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">onRemoveAll:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="645696576"/>
+						<reference key="destination" ref="208482597"/>
 					</object>
 					<int key="connectionID">557</int>
 				</object>
@@ -3395,7 +3398,7 @@
 							<reference ref="944610105"/>
 							<reference ref="774247219"/>
 							<reference ref="967249035"/>
-							<reference ref="645696576"/>
+							<reference ref="208482597"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -3456,7 +3459,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">556</int>
-						<reference key="object" ref="645696576"/>
+						<reference key="object" ref="208482597"/>
 						<reference key="parent" ref="928221662"/>
 					</object>
 				</array>
@@ -3733,7 +3736,6 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="Mushroom-Super">{128, 128}</string>
 			<string key="NSMenuCheckmark">{9, 8}</string>
 			<string key="NSMenuMixedState">{7, 2}</string>
 			<string key="NSToolbarCustomizeToolbarItemImage">{32, 32}</string>
@@ -3741,6 +3743,8 @@
 			<string key="NSToolbarShowColors">{32, 32}</string>
 			<string key="NSToolbarShowFonts">{32, 32}</string>
 			<string key="border">{32, 32}</string>
+			<string key="clear">{128, 128}</string>
+			<string key="javascript">{128, 128}</string>
 			<string key="physics">{128, 128}</string>
 			<string key="trash">{128, 128}</string>
 		</dictionary>
