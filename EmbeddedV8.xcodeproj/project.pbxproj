@@ -17,6 +17,12 @@
 		4A061C80144E5BA300EA823D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C60144E5BA300EA823D /* Cocoa.framework */; };
 		4A061C88144E5BA300EA823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C86144E5BA300EA823D /* InfoPlist.strings */; };
 		4A061C8B144E5BA300EA823D /* EmbeddedV8Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */; };
+		4A061C991450BCC300EA823D /* GameWorld.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C981450BCC300EA823D /* GameWorld.js */; };
+		4A061CA31450C03200EA823D /* Mushroom-Super.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A061CA21450C03200EA823D /* Mushroom-Super.png */; };
+		4A061CA61450C0A300EA823D /* GameView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A061CA51450C0A300EA823D /* GameView.mm */; };
+		4A061CAD1450CB2100EA823D /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A061CAC1450CB2100EA823D /* border.png */; };
+		4A27F2611450CCF5009B5C56 /* physics.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A27F2601450CCF5009B5C56 /* physics.png */; };
+		4A478DA114511C5000F3D472 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A478DA014511C4F00F3D472 /* trash.png */; };
 		4A57712E144FC34700EC96AF /* EntityFactory.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A57712D144FC34700EC96AF /* EntityFactory.js */; };
 		4A5771311450085800EC96AF /* Main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A5771301450085800EC96AF /* Main.js */; };
 		4A5771371450834B00EC96AF /* ScriptManifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A5771361450834B00EC96AF /* ScriptManifest.plist */; };
@@ -55,6 +61,14 @@
 		4A061C87144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A061C89144E5BA300EA823D /* EmbeddedV8Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmbeddedV8Tests.h; sourceTree = "<group>"; };
 		4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmbeddedV8Tests.m; sourceTree = "<group>"; };
+		4A061C981450BCC300EA823D /* GameWorld.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = GameWorld.js; path = JavaScript/GameWorld.js; sourceTree = "<group>"; };
+		4A061CA21450C03200EA823D /* Mushroom-Super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mushroom-Super.png"; sourceTree = "<group>"; };
+		4A061CA41450C0A300EA823D /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		4A061CA51450C0A300EA823D /* GameView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameView.mm; sourceTree = "<group>"; };
+		4A061CAC1450CB2100EA823D /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
+		4A27F2601450CCF5009B5C56 /* physics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = physics.png; sourceTree = "<group>"; };
+		4A478D991450E9F500F3D472 /* ScriptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptUtils.h; sourceTree = "<group>"; };
+		4A478DA014511C4F00F3D472 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
 		4A577129144F7C9600EC96AF /* ScriptClassWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptClassWrapper.h; sourceTree = "<group>"; };
 		4A57712B144FA87900EC96AF /* EntityWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityWrapper.h; path = Game/EntityWrapper.h; sourceTree = "<group>"; };
 		4A57712D144FC34700EC96AF /* EntityFactory.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = EntityFactory.js; path = JavaScript/EntityFactory.js; sourceTree = "<group>"; };
@@ -133,12 +147,10 @@
 		4A061C66144E5BA300EA823D /* EmbeddedV8 */ = {
 			isa = PBXGroup;
 			children = (
+				4A851A591451326900BDFF21 /* Application */,
 				4A57712C144FC2E700EC96AF /* JavaScript */,
 				4AD1C827144F624900D55C3B /* Game */,
 				4AD1C822144E9B7A00D55C3B /* Scripting */,
-				4A061C72144E5BA300EA823D /* AppDelegate.h */,
-				4A061C73144E5BA300EA823D /* AppDelegate.mm */,
-				4A061C75144E5BA300EA823D /* MainMenu.xib */,
 				4A061C67144E5BA300EA823D /* Supporting Files */,
 			);
 			path = EmbeddedV8;
@@ -147,6 +159,11 @@
 		4A061C67144E5BA300EA823D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A061C75144E5BA300EA823D /* MainMenu.xib */,
+				4A478DA014511C4F00F3D472 /* trash.png */,
+				4A27F2601450CCF5009B5C56 /* physics.png */,
+				4A061CAC1450CB2100EA823D /* border.png */,
+				4A061CA21450C03200EA823D /* Mushroom-Super.png */,
 				4A5771361450834B00EC96AF /* ScriptManifest.plist */,
 				4A061C68144E5BA300EA823D /* EmbeddedV8-Info.plist */,
 				4A061C69144E5BA300EA823D /* InfoPlist.strings */,
@@ -181,8 +198,20 @@
 			children = (
 				4A5771301450085800EC96AF /* Main.js */,
 				4A57712D144FC34700EC96AF /* EntityFactory.js */,
+				4A061C981450BCC300EA823D /* GameWorld.js */,
 			);
 			name = JavaScript;
+			sourceTree = "<group>";
+		};
+		4A851A591451326900BDFF21 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4A061C72144E5BA300EA823D /* AppDelegate.h */,
+				4A061C73144E5BA300EA823D /* AppDelegate.mm */,
+				4A061CA41450C0A300EA823D /* GameView.h */,
+				4A061CA51450C0A300EA823D /* GameView.mm */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		4AD1C822144E9B7A00D55C3B /* Scripting */ = {
@@ -192,6 +221,7 @@
 				4AD1C823144E9B7A00D55C3B /* ScriptEnv.cpp */,
 				4AD1C824144E9B7A00D55C3B /* ScriptEnv.h */,
 				4A577129144F7C9600EC96AF /* ScriptClassWrapper.h */,
+				4A478D991450E9F500F3D472 /* ScriptUtils.h */,
 			);
 			path = Scripting;
 			sourceTree = "<group>";
@@ -281,7 +311,12 @@
 				4A061C77144E5BA300EA823D /* MainMenu.xib in Resources */,
 				4A57712E144FC34700EC96AF /* EntityFactory.js in Resources */,
 				4A5771311450085800EC96AF /* Main.js in Resources */,
+				4A061C991450BCC300EA823D /* GameWorld.js in Resources */,
 				4A5771371450834B00EC96AF /* ScriptManifest.plist in Resources */,
+				4A061CA31450C03200EA823D /* Mushroom-Super.png in Resources */,
+				4A061CAD1450CB2100EA823D /* border.png in Resources */,
+				4A27F2611450CCF5009B5C56 /* physics.png in Resources */,
+				4A478DA114511C5000F3D472 /* trash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +355,7 @@
 				4A061C74144E5BA300EA823D /* AppDelegate.mm in Sources */,
 				4AD1C825144E9B7A00D55C3B /* ScriptEnv.cpp in Sources */,
 				4AD1C829144F627F00D55C3B /* Entity.cpp in Sources */,
+				4A061CA61450C0A300EA823D /* GameView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,13 +466,16 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/V8/include\"";
 				INFOPLIST_FILE = "EmbeddedV8/EmbeddedV8-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/V8/libs\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -447,13 +486,16 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EmbeddedV8/EmbeddedV8-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/V8/include\"";
 				INFOPLIST_FILE = "EmbeddedV8/EmbeddedV8-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/V8/libs\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

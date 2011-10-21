@@ -47,10 +47,10 @@ public:
         obj->SetAccessor(v8::String::New("pos"), GetPos, SetPos);
         
         // Bind the Direction
-        obj->SetAccessor(v8::String::New("dir"), GetDir, SetDir);
+        obj->SetAccessor(v8::String::New("width"), GetWidth, SetWidth);
         
         // Bind the Velocity
-        obj->SetAccessor(v8::String::New("vel"), GetVel, SetVel);
+        obj->SetAccessor(v8::String::New("height"), GetHeight, SetHeight);
         
     }
     
@@ -83,29 +83,29 @@ private:
         static_cast<Entity*>(v8::Local<v8::External>::Cast(info.Holder()->GetInternalField(0))->Value())->SetPosition(array->Get(0)->NumberValue(), array->Get(1)->NumberValue());
     }
     
-    static v8::Handle<v8::Value> GetDir(v8::Local<v8::String> property, const v8::AccessorInfo &info) 
+    static v8::Handle<v8::Value> GetWidth(v8::Local<v8::String> property, const v8::AccessorInfo &info) 
     {
         return v8::Number::New(static_cast<Entity*>(v8::Local<v8::External>::Cast(
-                        info.Holder()->GetInternalField(0))->Value())->GetDirection());
+                        info.Holder()->GetInternalField(0))->Value())->GetWidth());
 
     }
   
-    static void SetDir(v8::Local<v8::String> property, v8::Local<v8::Value> value, const v8::AccessorInfo& info)
+    static void SetWidth(v8::Local<v8::String> property, v8::Local<v8::Value> value, const v8::AccessorInfo& info)
     {
         v8::Local<v8::Number> num = v8::Local<v8::Number>::Cast(value);
-        static_cast<Entity*>(v8::Local<v8::External>::Cast(info.Holder()->GetInternalField(0))->Value())->SetDirection(num->NumberValue());
+        static_cast<Entity*>(v8::Local<v8::External>::Cast(info.Holder()->GetInternalField(0))->Value())->SetWidth(num->NumberValue());
     }
     
-    static v8::Handle<v8::Value> GetVel(v8::Local<v8::String> property, const v8::AccessorInfo &info) 
+    static v8::Handle<v8::Value> GetHeight(v8::Local<v8::String> property, const v8::AccessorInfo &info) 
     {
         return v8::Number::New(static_cast<Entity*>(v8::Local<v8::External>::Cast(
-                        info.Holder()->GetInternalField(0))->Value())->GetVelocity());
+                        info.Holder()->GetInternalField(0))->Value())->GetHeight());
     }
     
-    static void SetVel(v8::Local<v8::String> property, v8::Local<v8::Value> value, const v8::AccessorInfo& info)
+    static void SetHeight(v8::Local<v8::String> property, v8::Local<v8::Value> value, const v8::AccessorInfo& info)
     {
         v8::Local<v8::Number> num = v8::Local<v8::Number>::Cast(value);
-        static_cast<Entity*>(v8::Local<v8::External>::Cast(info.Holder()->GetInternalField(0))->Value())->SetVelocity(num->NumberValue());
+        static_cast<Entity*>(v8::Local<v8::External>::Cast(info.Holder()->GetInternalField(0))->Value())->SetHeight(num->NumberValue());
     }
 };
 

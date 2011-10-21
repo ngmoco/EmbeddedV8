@@ -16,50 +16,18 @@
 // DEALINGS IN THE SOFTWARE.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  Main.js
+//  GameWorld.js
 //  EmbeddedV8
 
-var last = null;
-var Factory = new EntityFactory();
-
-function OnAddEntity()
+/*
+var GameWorld = function()
 {
-    var count = Math.floor(Math.random()*100) + 1;
-    for(var idx = 0; idx < count; ++idx)
-    {
-        Factory.CreateEntity();
-    }
+    this._boundsEnabled = false;
+    this._gravityEnabled = false;
 }
 
-function OnRemoveEntites()
-{
-    Factory.ClearAllEntities();
-}
+GameWorld.prototype.SetBoundEnabled = function( isEabled ){ this._boundsEnabled = isEnabled; }
+GameWorld.prototype.SetGravityEnabled = function( isEnabled ){ this._gravityEnabled = isEabled; }
 
-function OnGameStart()
-{
-    return 0;
-}
-
-function OnGameStop()
-{
-    
-}
-
-function OnGameUpdate()
-{
-    // Calculating Delta time
-    var now = new Date();
-    var delta = 0;
-    
-    if(last)
-    {
-        delta = now.getTime() - last.getTime();
-    }
-    
-    Factory.Update(delta);
-    
-    last = now;
-    return Factory.entities;
-}
-
+var TheGameWorld = new GameWorld();
+*/

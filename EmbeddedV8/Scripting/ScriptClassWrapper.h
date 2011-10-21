@@ -16,7 +16,6 @@
 // DEALINGS IN THE SOFTWARE.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
 //  ScriptClassWrapper.h
 //  EmbeddedV8
 
@@ -45,6 +44,7 @@ public:
     }
 
     static v8::Persistent<v8::ObjectTemplate> sClassTemplate;
+    
 private:
    
     static v8::Handle<v8::Value> OnCreate(const v8::Arguments& args)
@@ -55,10 +55,7 @@ private:
             return v8::Undefined();
         }
 
-
-        
         v8::Handle<v8::Object> result = sClassTemplate->NewInstance();
-        //v8::Handle<v8::External> class_ptr;
         T* instance = new T(args);
         v8::Persistent<v8::External> class_ptr = v8::Persistent<v8::External>::New(v8::External::New(instance));
         class_ptr.MakeWeak(NULL, ScriptedClass<T>::OnReleased);
@@ -74,8 +71,6 @@ private:
         T* instance = static_cast<T*>(ref->Value());
         delete instance;
     }
-    
-    
 };
 
 template<typename T>

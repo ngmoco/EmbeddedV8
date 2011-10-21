@@ -26,17 +26,15 @@
 namespace game
 {
 
-
-
 Entity::Entity()
 {
-    mPosition[0] = 1;
-    mPosition[1] = 2;
+    mPosition[0] = 0;
+    mPosition[1] = 0;
 }
 
 Entity::~Entity()
 {
-    printf("FREE AT LAST, FREE AT LAST");
+    printf("Release Entity\n");
 }
 
 } // end of namespace game

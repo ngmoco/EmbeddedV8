@@ -16,50 +16,20 @@
 // DEALINGS IN THE SOFTWARE.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  Main.js
+//  GameView.h
 //  EmbeddedV8
 
-var last = null;
-var Factory = new EntityFactory();
+#import <Cocoa/Cocoa.h>
+#import "AppDelegate.h"
 
-function OnAddEntity()
+@interface GameView : NSView
 {
-    var count = Math.floor(Math.random()*100) + 1;
-    for(var idx = 0; idx < count; ++idx)
-    {
-        Factory.CreateEntity();
-    }
-}
 
-function OnRemoveEntites()
-{
-    Factory.ClearAllEntities();
-}
-
-function OnGameStart()
-{
-    return 0;
-}
-
-function OnGameStop()
-{
+@private
+    NSTimer* timer;
     
 }
 
-function OnGameUpdate()
-{
-    // Calculating Delta time
-    var now = new Date();
-    var delta = 0;
-    
-    if(last)
-    {
-        delta = now.getTime() - last.getTime();
-    }
-    
-    Factory.Update(delta);
-    
-    last = now;
-    return Factory.entities;
-}
+@property (assign) IBOutlet AppDelegate* appDel;
 
+@end

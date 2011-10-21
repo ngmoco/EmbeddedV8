@@ -1,10 +1,23 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 2011 Chris Jimison
 //
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+// documentation files (the "Software"), to deal in the Software without restriction, including without 
+// limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of 
+// the Software, and to permit persons to whom the Software is furnished to do so, subject to the following 
+// conditions:
+//
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+// TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+// CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+// DEALINGS IN THE SOFTWARE.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  ScriptEnv.cpp
-//  V8Game
-//
-//  Created by Chris Jimison on 10/18/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
+//  EmbeddedV8
 
 #include "ScriptEnv.h"
 #include <iostream>
@@ -110,6 +123,7 @@ v8::Handle<v8::Value> ScriptEnv::ExecuteScript(const char* data, uint32_t* idx)
 v8::Handle<v8::Value> ScriptEnv::ExecuteScript(const uint32_t scriptId)
 {
     v8::HandleScope current_scope;
+    v8::Context::Scope context_scope(mContext);
         
     ScriptMap::iterator iter = mScripts.begin() + scriptId;
     v8::Handle<v8::Value> val;
@@ -134,6 +148,30 @@ v8::Handle<v8::Value> ScriptEnv::ExecuteScript()
         val = (*iter)->Run();
     }
     
+    return current_scope.Close(val);
+}
+
+v8::Handle<v8::Function> ScriptEnv::FindScriptFunc(const char* function)
+{
+    v8::HandleScope current_scope;
+    v8::Context::Scope context_scope(mContext);
+    
+    v8::Handle<v8::String> func_name = v8::String::New(function); 
+    v8::Handle<v8::Value> func = mContext->Global()->Get(func_name); 
+    
+    // It is a function; cast it to a Function 
+    v8::Handle<v8::Function> func_fun = v8::Handle<v8::Function>::Cast(func);
+    
+    return  current_scope.Close(func_fun);
+}
+
+v8::Handle<v8::Value> ScriptEnv::CallScriptFunc(v8::Handle<v8::Function> handle, const int argc, v8::Handle<v8::Value>* argv)
+{
+    v8::HandleScope current_scope;
+    v8::Context::Scope context_scope(mContext);
+
+    v8::Handle<v8::Value> val = handle->Call(mContext->Global(), argc, argv);
+
     return current_scope.Close(val);
 }
 

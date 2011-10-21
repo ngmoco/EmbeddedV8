@@ -18,6 +18,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Entity.h
 //  EmbeddedV8
+
 #ifndef EmbeddedV8_Entity_h
 #define EmbeddedV8_Entity_h
 
@@ -41,27 +42,27 @@ public:
     
     void LogData()
     { 
-        printf("Position = ( %f, %f )\nDirection = %f\nVelocity = %f\n", 
-                mPosition[0], mPosition[1], mDirection, mVelocity);
+        printf("Position = ( %f, %f )\nwidth = %f\nheight = %f\n", 
+                mPosition[0], mPosition[1], mWidth, mHeight);
     }
     
     const float* GetPosition() const { return mPosition; }
     void SetPosition(const float* pos){ SetPosition(pos[0], pos[1]); }
-    void SetPosition(const float x = 0.0f, const float y = 0.0f){ mPosition[0] = x; mPosition[1] = y; }
+    void SetPosition(const float x = 0.0f, const float y = 0.0f){ mPosition[0] = x; mPosition[1] = y;}
     
-    float GetDirection() const { return mDirection; }
-    void SetDirection(const float angle = 0.0f) { mDirection = angle; }
+    float GetWidth() const { return mWidth; }
+    void SetWidth(const float width = 0.0f) { mWidth = width; }
     
-    float GetVelocity() const { return mVelocity; }
-    void SetVelocity(const float velocity){ mVelocity = velocity; }
+    float GetHeight() const { return mHeight; }
+    void SetHeight(const float height = 0.0f) { mHeight = height; }
 
 private:
    
     ///////////////////////////////////////////////////
     // Data Members
     float mPosition[2];
-    float mDirection;
-    float mVelocity;
+    float mWidth;
+    float mHeight;
 
     ///////////////////////////////////////////////////
     // Disallowed methods

@@ -16,50 +16,40 @@
 // DEALINGS IN THE SOFTWARE.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  Main.js
+//  GameView.mm
 //  EmbeddedV8
 
-var last = null;
-var Factory = new EntityFactory();
+#import "GameView.h"
 
-function OnAddEntity()
+static const float FPS_60 = 0.01666666666667;
+static const float FPS_30 = FPS_60 * 2;
+
+@implementation GameView
+
+@synthesize appDel;
+
+
+- (void)timerFireMethod:(NSTimer*)theTimer
 {
-    var count = Math.floor(Math.random()*100) + 1;
-    for(var idx = 0; idx < count; ++idx)
+    [self display];
+}
+
+-(id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if(self)
     {
-        Factory.CreateEntity();
+        // Initialization code here.
+        timer = [NSTimer scheduledTimerWithTimeInterval:FPS_60
+                              target:self selector:@selector(timerFireMethod:)
+                              userInfo:nil repeats:YES];
     }
+    return self;
 }
 
-function OnRemoveEntites()
+- (void)drawRect:(NSRect)dirtyRect
 {
-    Factory.ClearAllEntities();
+    [appDel renderGame:dirtyRect];
 }
 
-function OnGameStart()
-{
-    return 0;
-}
-
-function OnGameStop()
-{
-    
-}
-
-function OnGameUpdate()
-{
-    // Calculating Delta time
-    var now = new Date();
-    var delta = 0;
-    
-    if(last)
-    {
-        delta = now.getTime() - last.getTime();
-    }
-    
-    Factory.Update(delta);
-    
-    last = now;
-    return Factory.entities;
-}
-
+@end

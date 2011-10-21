@@ -16,7 +16,6 @@
 // DEALINGS IN THE SOFTWARE.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
 //  AppDelegate.m
 //  EmbeddedV8
 
@@ -26,22 +25,28 @@
 #include "Scripting/ScriptBinder.h"
 #include "Scripting/ScriptClassWrapper.h"
 #include "Game/EntityWrapper.h"
+#include "Scripting/ScriptUtils.h"
 
 using namespace game;
 
 @implementation AppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window, boarder, physics;
+
+- (void) alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+{
+
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Setup the environment
     Open_Script_Scope;
-    ScriptEnv env;
+    scriptEnv = new ScriptEnv();
 
     // Reigster any classes to the global
-    ScriptedClass< EntityWrapper >::Register(env, "Entity");
-    env.StartContext();
+    ScriptedClass< EntityWrapper >::Register(*scriptEnv, "Entity");
+    scriptEnv->StartContext();
 
     NSDictionary* plistDict = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ScriptManifest" ofType:@"plist"]];
     NSArray* code = [plistDict objectForKey:@"code"];
@@ -51,15 +56,103 @@ using namespace game;
         // Load up some scripts
         NSString* file = [[NSBundle mainBundle] pathForResource:name ofType:@"js"];
         NSString* data = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
-        env.ExecuteScript( [data cStringUsingEncoding:NSUTF8StringEncoding]  );
+        scriptEnv->ExecuteScript( [data cStringUsingEncoding:NSUTF8StringEncoding]  );
     }
     
+    onGameStart =       v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnGameStart"));
+    onGameStop =        v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnGameStop"));
+    onGameUpdate =      v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnGameUpdate"));
+    onAddEntity =       v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnAddEntity"));
+    onBoundsSet =       v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("SetGameBounds"));
+    onRemoveEntites =   v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnRemoveEntites"));
     
-    //v8::Handle<v8::Value> result = env.ExecuteScript("var x = new Entity(); x.pos = [10, 20]; x.LogData();");
-    // Convert the result to an ASCII string and print it.
-    //printf("%f\n", (*result)->NumberValue());
-    //env.ForceGC();
+    int32_t error = CastTo<int32_t>(scriptEnv->CallScriptFunc(onGameStart));
+    
+    if(error)
+    {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:@"Could not load the JS GAME code"];
+        [alert setInformativeText:@"Error on starting the game Javascript code"];
+        [alert addButtonWithTitle:@"Exit"];
+        [alert beginSheetModalForWindow:_window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+        alert = nil;
+    }
+}
 
+-(IBAction) onAddEntity:(id) sender
+{
+    Open_Script_Scope;
+    scriptEnv->CallScriptFunc(onAddEntity);
+}
+
+-(IBAction) onRemoveAll:(id) sender
+{
+    Open_Script_Scope;
+    scriptEnv->CallScriptFunc(onRemoveEntites);
+}
+
+-(IBAction) onSetBoard:(id) sender
+{
+
+}
+
+-(IBAction) onSetPhysics:(id) sender
+{
+
+}
+
+-(IBAction) onForceGC:(id) sender
+{
+    if(scriptEnv)
+    {
+        scriptEnv->ForceGC();
+    }
+}
+
+-(void) renderGame:(NSRect)drawRect
+{
+    if(scriptEnv)
+    { 
+        Open_Script_Scope;
+        
+        v8::Handle<v8::Value> argv[2] = { Wrap<int32_t>(drawRect.size.width), Wrap<int32_t>(drawRect.size.width) }; 
+        scriptEnv->CallScriptFunc(onBoundsSet, 2, argv);
+        
+        // Get list of all game entities active
+        v8::Handle<v8::Value> result = scriptEnv->CallScriptFunc(onGameUpdate);
+        v8::Local<v8::Array> array = v8::Array::Cast(*result);
+        
+        uint32_t len = array->Length();
+        for(uint32_t idx = 0; idx < len; ++idx)
+        {
+            Entity* entity = CastTo<Entity*>(array->Get(idx));
+            
+            // Now lets draw the entity at the given location
+            [[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
+
+            NSSize viewSize  = drawRect.size;
+            NSSize imageSize = { entity->GetWidth(), entity->GetHeight() };
+
+            NSPoint viewCenter;
+            viewCenter.x = viewSize.width  * 0.50 + entity->GetPosition()[0];
+            viewCenter.y = viewSize.height * 0.50 + entity->GetPosition()[1];
+
+            NSPoint imageOrigin = viewCenter;
+            imageOrigin.x -= imageSize.width  * 0.50;
+            imageOrigin.y -= imageSize.height * 0.50;
+
+            NSRect destRect;
+            destRect.origin = imageOrigin;
+            destRect.size = imageSize;
+            
+            NSImage * image = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForImageResource:@"Mushroom-Super"]];
+            
+            [image drawInRect: destRect
+                fromRect: NSZeroRect
+                operation: NSCompositeSourceOver
+                fraction: 1.0];
+        }
+    }
 }
 
 @end
