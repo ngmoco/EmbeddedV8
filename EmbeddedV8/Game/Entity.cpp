@@ -37,4 +37,16 @@ Entity::~Entity()
     printf("Release Entity\n");
 }
 
+void Entity::SetPosition(const float* pos)
+{ 
+    SetPosition(pos[0], pos[1]);
+}
+    
+void Entity::SetPosition(const float x, const float y)
+{ 
+    mPosition[0] = x; 
+    mPosition[1] = y;
+}
+
+
 } // end of namespace game

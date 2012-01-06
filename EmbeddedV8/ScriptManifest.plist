@@ -4,8 +4,6 @@
 <dict>
 	<key>code</key>
 	<array>
-		<string>EntityFactory</string>
-		<string>GameWorld</string>
 		<string>Main</string>
 	</array>
 </dict>

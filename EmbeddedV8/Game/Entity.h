@@ -47,8 +47,8 @@ public:
     }
     
     const float* GetPosition() const { return mPosition; }
-    void SetPosition(const float* pos){ SetPosition(pos[0], pos[1]); }
-    void SetPosition(const float x = 0.0f, const float y = 0.0f){ mPosition[0] = x; mPosition[1] = y;}
+    void SetPosition(const float* pos);//{ SetPosition(pos[0], pos[1]); }
+    void SetPosition(const float x = 0.0f, const float y = 0.0f);//{ mPosition[0] = x; mPosition[1] = y;}
     
     float GetWidth() const { return mWidth; }
     void SetWidth(const float width = 0.0f) { mWidth = width; }

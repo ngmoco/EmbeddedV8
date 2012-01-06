@@ -60,7 +60,7 @@ uint32_t ScriptEnv::LoadScriptFromFile(const char* filePath)
     if( !inFile )
     {
         //cerr << "Couldn´t open input file" << endl;
-        //return false;
+        return 0;
     }
 
     // create reader objects
@@ -69,7 +69,6 @@ uint32_t ScriptEnv::LoadScriptFromFile(const char* filePath)
  
     std::string data;
     
-
     while( dataBegin != dataEnd )
     {
         data += *dataBegin;
@@ -86,9 +85,9 @@ uint32_t ScriptEnv::LoadScriptFromFile(const char* filePath)
     return idx;
 }
 
-void ScriptEnv::AttachToGlobalDef(v8::Handle<v8::String> name, v8::Handle<v8::FunctionTemplate> tmp)
-{ 
-    mGlobalObjDef->Set(name, tmp);
+void ScriptEnv::AttachToGlobalDef(const char* name, v8::Handle<v8::Value> (*func)(const v8::Arguments& args))
+{
+    mGlobalObjDef->Set(v8::String::New(name), v8::FunctionTemplate::New(func));
 }
 
 v8::Handle<v8::Value> NewCallback(const v8::Arguments& args)

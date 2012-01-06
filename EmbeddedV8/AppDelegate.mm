@@ -28,6 +28,14 @@
 #include "Scripting/ScriptUtils.h"
 
 using namespace game;
+v8::Handle<v8::Value> PrintOut(const v8::Arguments& args);
+v8::Handle<v8::Value> PrintOut(const v8::Arguments& args)
+{
+    //v8::String::Utf8Value str(args[0]);
+    //const char* cstr = *str;
+    //NSLog(@"%s", cstr);
+    return v8::Undefined();
+}
 
 @implementation AppDelegate
 
@@ -44,10 +52,14 @@ using namespace game;
     Open_Script_Scope;
     scriptEnv = new ScriptEnv();
 
-    // Reigster any classes to the global
+    // Register any classes to the global
     ScriptedClass< EntityWrapper >::Register(*scriptEnv, "Entity");
+    
+    scriptEnv->AttachToGlobalDef("PrintLog", PrintOut);
+    
+    // Start up the context
     scriptEnv->StartContext();
-
+    
     NSDictionary* plistDict = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ScriptManifest" ofType:@"plist"]];
     NSArray* code = [plistDict objectForKey:@"code"];
 
@@ -77,6 +89,7 @@ using namespace game;
         [alert beginSheetModalForWindow:_window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
         alert = nil;
     }
+    image = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForImageResource:@"javascript"]];
 }
 
 -(IBAction) onAddEntity:(id) sender
@@ -123,6 +136,7 @@ using namespace game;
         v8::Local<v8::Array> array = v8::Array::Cast(*result);
         
         uint32_t len = array->Length();
+        
         for(uint32_t idx = 0; idx < len; ++idx)
         {
             Entity* entity = CastTo<Entity*>(array->Get(idx));
@@ -145,7 +159,7 @@ using namespace game;
             destRect.origin = imageOrigin;
             destRect.size = imageSize;
             
-            NSImage * image = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForImageResource:@"javascript"]];
+            
             
             [image drawInRect: destRect
                 fromRect: NSZeroRect

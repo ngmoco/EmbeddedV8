@@ -33,7 +33,7 @@
     v8::Persistent<v8::Function> onAddEntity;
     v8::Persistent<v8::Function> onRemoveEntites;
     v8::Persistent<v8::Function> onBoundsSet;
-    
+    NSImage * image;
     BOOL createNew;
 }
 

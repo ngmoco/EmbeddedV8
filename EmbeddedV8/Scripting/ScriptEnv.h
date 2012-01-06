@@ -37,7 +37,7 @@ public:
     ~ScriptEnv();
     
     void StartContext();
-    void AttachToGlobalDef(v8::Handle<v8::String> name, v8::Handle<v8::FunctionTemplate> tmp);
+    void AttachToGlobalDef(const char* name, v8::Handle<v8::Value> (*func)(const v8::Arguments& args));
     uint32_t LoadScriptFromFile(const char* fileName);
     
     v8::Handle<v8::Value> ExecuteScript(const char* data, uint32_t* idx = NULL);

@@ -32,7 +32,7 @@ public:
     static void Register(ScriptEnv env, const char* N)
     {
         // Pull the context out
-        env.AttachToGlobalDef(v8::String::New(N), v8::FunctionTemplate::New(ScriptedClass<T>::OnCreate));
+        env.AttachToGlobalDef(N, ScriptedClass<T>::OnCreate);
         v8::Persistent<v8::ObjectTemplate> class_template;
         v8::Handle<v8::ObjectTemplate> rt = v8::ObjectTemplate::New();
 
