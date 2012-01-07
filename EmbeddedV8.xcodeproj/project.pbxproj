@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A04F54E14B7DD8F00D24F1D /* Compiled.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A04F54D14B7DD8F00D24F1D /* Compiled.js */; };
+		4A04F55114B7F47B00D24F1D /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A04F54F14B7F47B00D24F1D /* border.png */; };
+		4A04F55214B7F47B00D24F1D /* physics.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A04F55014B7F47B00D24F1D /* physics.png */; };
 		4A061C61144E5BA300EA823D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C60144E5BA300EA823D /* Cocoa.framework */; };
 		4A061C6B144E5BA300EA823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C69144E5BA300EA823D /* InfoPlist.strings */; };
 		4A061C6D144E5BA300EA823D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C6C144E5BA300EA823D /* main.mm */; };
@@ -17,15 +20,8 @@
 		4A061C80144E5BA300EA823D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A061C60144E5BA300EA823D /* Cocoa.framework */; };
 		4A061C88144E5BA300EA823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C86144E5BA300EA823D /* InfoPlist.strings */; };
 		4A061C8B144E5BA300EA823D /* EmbeddedV8Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */; };
-		4A061C991450BCC300EA823D /* GameWorld.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A061C981450BCC300EA823D /* GameWorld.js */; };
-		4A061CA31450C03200EA823D /* Mushroom-Super.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A061CA21450C03200EA823D /* Mushroom-Super.png */; };
 		4A061CA61450C0A300EA823D /* GameView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A061CA51450C0A300EA823D /* GameView.mm */; };
-		4A061CAD1450CB2100EA823D /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A061CAC1450CB2100EA823D /* border.png */; };
-		4A27F2611450CCF5009B5C56 /* physics.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A27F2601450CCF5009B5C56 /* physics.png */; };
 		4A478DA114511C5000F3D472 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A478DA014511C4F00F3D472 /* trash.png */; };
-		4A57712E144FC34700EC96AF /* EntityFactory.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A57712D144FC34700EC96AF /* EntityFactory.js */; };
-		4A5771311450085800EC96AF /* Main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A5771301450085800EC96AF /* Main.js */; };
-		4A5771371450834B00EC96AF /* ScriptManifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A5771361450834B00EC96AF /* ScriptManifest.plist */; };
 		4A851A5B1451D70800BDFF21 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A851A5A1451D70800BDFF21 /* clear.png */; };
 		4A851A5D1451D76000BDFF21 /* javascript.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A851A5C1451D76000BDFF21 /* javascript.png */; };
 		4AD1C821144E99C500D55C3B /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD1C820144E99C500D55C3B /* libv8.a */; };
@@ -44,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A04F54D14B7DD8F00D24F1D /* Compiled.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Compiled.js; path = JavaScript/Compiled.js; sourceTree = "<group>"; };
+		4A04F54F14B7F47B00D24F1D /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
+		4A04F55014B7F47B00D24F1D /* physics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = physics.png; sourceTree = "<group>"; };
+		4A04F55314B80F8700D24F1D /* EntityFactory.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = EntityFactory.js; path = JavaScript/src/EntityFactory.js; sourceTree = "<group>"; };
 		4A061C5C144E5BA300EA823D /* EmbeddedV8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmbeddedV8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A061C60144E5BA300EA823D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4A061C63144E5BA300EA823D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -63,19 +63,13 @@
 		4A061C87144E5BA300EA823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A061C89144E5BA300EA823D /* EmbeddedV8Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmbeddedV8Tests.h; sourceTree = "<group>"; };
 		4A061C8A144E5BA300EA823D /* EmbeddedV8Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmbeddedV8Tests.m; sourceTree = "<group>"; };
-		4A061C981450BCC300EA823D /* GameWorld.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = GameWorld.js; path = JavaScript/GameWorld.js; sourceTree = "<group>"; };
-		4A061CA21450C03200EA823D /* Mushroom-Super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mushroom-Super.png"; sourceTree = "<group>"; };
 		4A061CA41450C0A300EA823D /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
 		4A061CA51450C0A300EA823D /* GameView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameView.mm; sourceTree = "<group>"; };
-		4A061CAC1450CB2100EA823D /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
-		4A27F2601450CCF5009B5C56 /* physics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = physics.png; sourceTree = "<group>"; };
 		4A478D991450E9F500F3D472 /* ScriptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptUtils.h; sourceTree = "<group>"; };
 		4A478DA014511C4F00F3D472 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
 		4A577129144F7C9600EC96AF /* ScriptClassWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptClassWrapper.h; sourceTree = "<group>"; };
 		4A57712B144FA87900EC96AF /* EntityWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityWrapper.h; path = Game/EntityWrapper.h; sourceTree = "<group>"; };
-		4A57712D144FC34700EC96AF /* EntityFactory.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = EntityFactory.js; path = JavaScript/EntityFactory.js; sourceTree = "<group>"; };
 		4A5771301450085800EC96AF /* Main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Main.js; path = JavaScript/Main.js; sourceTree = "<group>"; };
-		4A5771361450834B00EC96AF /* ScriptManifest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ScriptManifest.plist; path = EmbeddedV8/ScriptManifest.plist; sourceTree = SOURCE_ROOT; };
 		4A851A5A1451D70800BDFF21 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
 		4A851A5C1451D76000BDFF21 /* javascript.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = javascript.png; sourceTree = "<group>"; };
 		4AD1C820144E99C500D55C3B /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = V8/libs/libv8.a; sourceTree = "<group>"; };
@@ -163,14 +157,12 @@
 		4A061C67144E5BA300EA823D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A04F54F14B7F47B00D24F1D /* border.png */,
+				4A04F55014B7F47B00D24F1D /* physics.png */,
 				4A851A5C1451D76000BDFF21 /* javascript.png */,
 				4A851A5A1451D70800BDFF21 /* clear.png */,
 				4A061C75144E5BA300EA823D /* MainMenu.xib */,
 				4A478DA014511C4F00F3D472 /* trash.png */,
-				4A27F2601450CCF5009B5C56 /* physics.png */,
-				4A061CAC1450CB2100EA823D /* border.png */,
-				4A061CA21450C03200EA823D /* Mushroom-Super.png */,
-				4A5771361450834B00EC96AF /* ScriptManifest.plist */,
 				4A061C68144E5BA300EA823D /* EmbeddedV8-Info.plist */,
 				4A061C69144E5BA300EA823D /* InfoPlist.strings */,
 				4A061C6C144E5BA300EA823D /* main.mm */,
@@ -202,9 +194,9 @@
 		4A57712C144FC2E700EC96AF /* JavaScript */ = {
 			isa = PBXGroup;
 			children = (
+				4A04F55314B80F8700D24F1D /* EntityFactory.js */,
+				4A04F54D14B7DD8F00D24F1D /* Compiled.js */,
 				4A5771301450085800EC96AF /* Main.js */,
-				4A57712D144FC34700EC96AF /* EntityFactory.js */,
-				4A061C981450BCC300EA823D /* GameWorld.js */,
 			);
 			name = JavaScript;
 			sourceTree = "<group>";
@@ -251,6 +243,7 @@
 			buildPhases = (
 				4A061C58144E5BA300EA823D /* Sources */,
 				4A061C59144E5BA300EA823D /* Frameworks */,
+				4A04F55514B81ACE00D24F1D /* ShellScript */,
 				4A061C5A144E5BA300EA823D /* Resources */,
 			);
 			buildRules = (
@@ -312,19 +305,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A04F54E14B7DD8F00D24F1D /* Compiled.js in Resources */,
 				4A061C6B144E5BA300EA823D /* InfoPlist.strings in Resources */,
 				4A061C71144E5BA300EA823D /* Credits.rtf in Resources */,
 				4A061C77144E5BA300EA823D /* MainMenu.xib in Resources */,
-				4A57712E144FC34700EC96AF /* EntityFactory.js in Resources */,
-				4A5771311450085800EC96AF /* Main.js in Resources */,
-				4A061C991450BCC300EA823D /* GameWorld.js in Resources */,
-				4A5771371450834B00EC96AF /* ScriptManifest.plist in Resources */,
-				4A061CA31450C03200EA823D /* Mushroom-Super.png in Resources */,
-				4A061CAD1450CB2100EA823D /* border.png in Resources */,
-				4A27F2611450CCF5009B5C56 /* physics.png in Resources */,
 				4A478DA114511C5000F3D472 /* trash.png in Resources */,
 				4A851A5B1451D70800BDFF21 /* clear.png in Resources */,
 				4A851A5D1451D76000BDFF21 /* javascript.png in Resources */,
+				4A04F55114B7F47B00D24F1D /* border.png in Resources */,
+				4A04F55214B7F47B00D24F1D /* physics.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +328,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4A04F55514B81ACE00D24F1D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd EmbeddedV8/JavaScript\n./build.sh";
+		};
 		4A061C7B144E5BA300EA823D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

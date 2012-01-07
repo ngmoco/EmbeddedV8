@@ -31,9 +31,9 @@ using namespace game;
 v8::Handle<v8::Value> PrintOut(const v8::Arguments& args);
 v8::Handle<v8::Value> PrintOut(const v8::Arguments& args)
 {
-    //v8::String::Utf8Value str(args[0]);
-    //const char* cstr = *str;
-    //NSLog(@"%s", cstr);
+    v8::String::Utf8Value str(args[0]);
+    const char* cstr = *str;
+    NSLog(@"%s", cstr);
     return v8::Undefined();
 }
 
@@ -60,16 +60,9 @@ v8::Handle<v8::Value> PrintOut(const v8::Arguments& args)
     // Start up the context
     scriptEnv->StartContext();
     
-    NSDictionary* plistDict = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ScriptManifest" ofType:@"plist"]];
-    NSArray* code = [plistDict objectForKey:@"code"];
-
-    for(NSString* name in code)
-    {
-        // Load up some scripts
-        NSString* file = [[NSBundle mainBundle] pathForResource:name ofType:@"js"];
-        NSString* data = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
-        scriptEnv->ExecuteScript( [data cStringUsingEncoding:NSUTF8StringEncoding]  );
-    }
+    NSString* file = [[NSBundle mainBundle] pathForResource:@"Compiled" ofType:@"js"];
+    NSString* data = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+    scriptEnv->ExecuteScript( [data cStringUsingEncoding:NSUTF8StringEncoding]  );
     
     onGameStart =       v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnGameStart"));
     onGameStop =        v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnGameStop"));
