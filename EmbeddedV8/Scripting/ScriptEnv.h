@@ -37,27 +37,29 @@ public:
     ~ScriptEnv();
     
     void StartContext();
-    void AttachToGlobalDef(const char* name, v8::Handle<v8::Value> (*func)(const v8::Arguments& args));
-    uint32_t LoadScriptFromFile(const char* fileName);
+    void AttachToGlobalDef( const char* name, 
+                           v8::Handle<v8::Value> (*func)(const v8::Arguments& args));
     
-    v8::Handle<v8::Value> ExecuteScript(const char* data, uint32_t* idx = NULL);
-    v8::Handle<v8::Value> ExecuteScript(const uint32_t scriptId);
-    v8::Handle<v8::Value> ExecuteScript();
+    v8::Handle<v8::Value> ExecuteScriptFile(const char* filePath);
+    v8::Handle<v8::Value> ExecuteScript(const char* data, 
+                                        const char* name = "Unknown",
+                                        const bool releaseData = false);
+    
     v8::Handle<v8::Function> FindScriptFunc(const char* function);
-    v8::Handle<v8::Value> CallScriptFunc(v8::Handle<v8::Function> handle, const int argc = 0, v8::Handle<v8::Value>* argv = NULL);
-    
+    v8::Handle<v8::Value> CallScriptFunc(   v8::Handle<v8::Function> handle,
+                                         const int argc = 0,
+                                         v8::Handle<v8::Value>* argv = NULL);
     void ForceGC();
     
 private:
     
-    typedef std::vector< v8::Handle<v8::Script> > ScriptMap;
-    ScriptMap mScripts;
-    
     v8::Persistent<v8::ObjectTemplate> mGlobalObjDef;
     v8::Persistent<v8::Context> mContext;
     bool mContextReady;
+    v8::Persistent<v8::Object> mConsole;
     
-}; // end of class ScriptEnv    
+}; // end of class ScriptEnv
+
 
 
 #endif

@@ -62,7 +62,7 @@ v8::Handle<v8::Value> PrintOut(const v8::Arguments& args)
     
     NSString* file = [[NSBundle mainBundle] pathForResource:@"Compiled" ofType:@"js"];
     NSString* data = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
-    scriptEnv->ExecuteScript( [data cStringUsingEncoding:NSUTF8StringEncoding]  );
+    scriptEnv->ExecuteScript( [data cStringUsingEncoding:NSUTF8StringEncoding], "Compiled.js", false  );
     
     onGameStart =       v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnGameStart"));
     onGameStop =        v8::Persistent<v8::Function>::New(scriptEnv->FindScriptFunc("OnGameStop"));
